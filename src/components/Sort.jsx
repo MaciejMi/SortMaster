@@ -2,7 +2,7 @@ import Section from './Section';
 import '../assets/scss/Sort.scss';
 import { useState } from 'react';
 
-const bubbleSort = (array, step) => {
+const bubbleSort = (array, step = false) => {
 	const newArray = array.slice();
 	let swapped = false;
 	for (let i = 0; i < newArray.length; i++) {
@@ -11,11 +11,16 @@ const bubbleSort = (array, step) => {
 				let temp = newArray[j];
 				newArray[j] = newArray[j + 1];
 				newArray[j + 1] = temp;
-				if (step) return newArray;
+				swapped = true;
+
+				if (step) {
+					return newArray;
+				}
 			}
 		}
 		if (!swapped) break;
 	}
+
 	return newArray;
 };
 
@@ -36,8 +41,17 @@ const Sort = ({ title, description, type }) => {
 	};
 
 	const nextStep = () => {
-		const sortedArray = bubbleSort(numbers, true);
+		let sortedArray;
+		if (type === 'bubble') {
+			sortedArray = bubbleSort(numbers, true);
+		}
 		setNumbers(sortedArray);
+	};
+
+	const sortIt = () => {
+		if (type === 'bubble') {
+			setNumbers(bubbleSort(numbers));
+		}
 	};
 
 	return (
@@ -63,7 +77,7 @@ const Sort = ({ title, description, type }) => {
 					<button className="button" onClick={nextStep}>
 						Next Step
 					</button>
-					<button className="button" onClick={() => setNumbers(bubbleSort(numbers))}>
+					<button className="button" onClick={sortIt}>
 						Sort
 					</button>
 					<button className="button" onClick={resetNumbers}>
