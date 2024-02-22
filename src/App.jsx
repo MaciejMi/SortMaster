@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Main from './pages/Main';
 import Layout from './pages/Layout';
+import BubbleSort from './pages/BubbleSort';
 
 const App = () => {
 	return (
@@ -8,8 +9,8 @@ const App = () => {
 			<Routes>
 				<Route path="/" element={<Layout />}>
 					<Route index element={<Main />}></Route>
-					{/* <Route path="/bubble-sort" element={<BubbleSort />}></Route>
-					<Route path="/selection-sort" element={<SelectionSort />}></Route>
+					<Route path="/bubble-sort" element={<BubbleSort></BubbleSort>}></Route>
+					{/* <Route path="/selection-sort" element={<SelectionSort />}></Route>
 					<Route path="/insertion-sort" element={<BubbleSort />}></Route> */}
 				</Route>
 			</Routes>

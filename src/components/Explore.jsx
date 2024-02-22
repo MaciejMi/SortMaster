@@ -14,19 +14,22 @@ const Explore = ({ props }) => {
 					description="Learn and visualize the Bubble Sort algorithm"
 					linkText="Explore Bubble Sort"
 					img={bubbles}
+					to="/bubble-sort"
 					alt="Bubbles in the ocean"></SortBox>
 				<SortBox
 					title="Selection Sort"
 					description="Learn and visualize the Selection Sort algorithm"
 					linkText="Explore Selection Sort"
 					img={selection}
+					to="/selection-sort"
 					alt="A lot of doors"></SortBox>
 				<SortBox
-					title="Bubble Sort"
-					description="Learn and visualize the Bubble Sort algorithm"
-					linkText="Explore Bubble Sort"
+					title="Insertion Sort"
+					description="Learn and visualize the Insertion Sort algorithm"
+					linkText="Explore Insertion Sort"
 					img={insert}
-					alt="Bubbles in the ocean"></SortBox>
+					to="/insertion-sort"
+					alt="two people and puzzles"></SortBox>
 			</div>
 		</Section>
 	);

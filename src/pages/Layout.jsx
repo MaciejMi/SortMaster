@@ -11,7 +11,9 @@ const Layout = () => {
 					Quick Sort, we've got you covered.
 				</p>
 			</Header>
-			<Outlet></Outlet>
+			<main>
+				<Outlet></Outlet>
+			</main>
 			<Footer className="footer" />
 		</>
 	);

@@ -2,13 +2,7 @@ import '../assets/scss/style.scss';
 import Explore from '../components/Explore';
 
 const Main = () => {
-	return (
-		<>
-			<main>
-				<Explore />
-			</main>
-		</>
-	);
+	return <Explore />;
 };
 
 export default Main;
