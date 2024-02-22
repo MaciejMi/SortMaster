@@ -24,7 +24,7 @@ const bubbleSort = (array, step = false) => {
 	return newArray;
 };
 
-const selectionSort = newarray => {
+const selectionSort = (newarray, step = false) => {
 	const array = newarray.slice();
 	let n = array.length;
 	for (let i = 0; i < n; i++) {
@@ -38,12 +38,13 @@ const selectionSort = newarray => {
 			let tmp = array[i];
 			array[i] = array[min];
 			array[min] = tmp;
+			if (step) return array;
 		}
 	}
 	return array;
 };
 
-function insertionSort(newarray, step = false) {
+function insertionSort(newarray) {
 	const array = newarray.slice();
 	let n = array.length;
 
@@ -57,8 +58,6 @@ function insertionSort(newarray, step = false) {
 		}
 
 		array[j + 1] = current;
-
-		if (step) return array;
 	}
 
 	return array;
