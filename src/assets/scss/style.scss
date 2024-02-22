@@ -1,0 +1,35 @@
+@use './colors' as c;
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap');
+
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: 'Space Grotesk', sans-serif;
+	font-size: 1.6rem;
+	color: c.$font-color;
+	background-color: c.$background-color;
+}
+
+.header,
+.section,
+.footer {
+	padding: 4rem;
+}
+
+main {
+	margin: 0 auto;
+	max-width: 1000px;
+}
